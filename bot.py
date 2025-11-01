@@ -83,9 +83,15 @@ def bot_message(message):
                 with open("add.json", "w") as file:
                     json.dump({"add": False, "name": message.text, "commit": False}, file)
         elif message.text == orqaga:
-            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            for i in [menu1, menu2, menu3, menu4, menu5, menu6]:
-                markup.add(types.KeyboardButton(i))
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+            markup.add(
+                types.KeyboardButton(menu1),
+                types.KeyboardButton(menu2),
+                types.KeyboardButton(menu3),
+                types.KeyboardButton(menu4),
+                types.KeyboardButton(menu5),
+                types.KeyboardButton(menu6),
+            )
             for key in [menu1, menu2, menu3, menu4, menu5, menu6, bosh_sahifa]:
                 if message.chat.id in menu[key]:
                     menu[key].remove(message.chat.id)
