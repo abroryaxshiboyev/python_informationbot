@@ -83,7 +83,7 @@ def bot_message(message):
                 with open("add.json", "w") as file:
                     json.dump({"add": False, "name": message.text, "commit": False}, file)
         elif message.text == orqaga:
-            markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=3)
             markup.add(
                 types.KeyboardButton(menu1),
                 types.KeyboardButton(menu2),
