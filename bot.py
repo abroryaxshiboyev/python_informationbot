@@ -7,7 +7,7 @@ import os
 TOKEN = "6099999527:AAHuAytaxvv1DdZ82pmnOp4KtQ4kn7xSLTs" 
 bot = telebot.TeleBot(TOKEN)
 admin_chat_id=1566208883
-admin_chat_id = 878025138  # o‘rningga o‘zingning chat_id ni yoz
+# admin_chat_id = 878025138  # o‘rningga o‘zingning chat_id ni yoz
 
 # Flask ilova
 app = Flask(__name__)
